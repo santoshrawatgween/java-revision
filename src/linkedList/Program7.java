@@ -23,11 +23,26 @@ class DemoLinkedList
 	
 	public void display()
 	{
-		while(head!=null)
+		Node temp = head;
+		while(temp!=null)
 		{
-			System.out.println(head.data);
-			head = head.next;
+			System.out.println(temp.data);
+			temp = temp.next;
 		}
+	}
+	
+	public int size()
+	{
+		int count =0;
+		
+		Node temp = head;
+		while(temp!=null)
+		{
+			count++;
+			temp = temp.next;
+		}
+		return count;
+		
 	}
 	
 }
@@ -42,7 +57,12 @@ public class Program7
 		l1.add(62);
 		l1.add(63);
 		l1.add(64);
+		l1.display();  
+		l1.add(65);
+		l1.add(66);
 		l1.display();
+		System.out.println("length:"+l1.size());
+		
 	}
 
 }
